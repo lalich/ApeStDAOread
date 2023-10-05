@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Status from './components/status';
+import Send from './components/send';
+import Transactions from './components/transactions';
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const endpoint = '/mine_block'
+class App extends Component {
+  constructor(props){
+    super(props);
+  }
+  componentWillMount() {
+    axios.get(endpoint)
+  }
+  render(){
+    return (
+      <div className='App'>
+        <Status/>
+        <Send/>
+        <Transactions/>
+      </div>
+    )
+  }
+  }
 
 export default App;
