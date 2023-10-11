@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@web3-storage/w3cli": "^4.2.1",
+    "moralis": "^2.23.1"
+  }
+}
