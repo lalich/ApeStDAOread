@@ -48,7 +48,7 @@ class Send extends Component {
         return (
             <Container>
                 <br/>
-                <h3><b>ApeSt</b></h3>
+                <h3><b>ApeSt DAO</b></h3>
                 <h4><b style={{color: '#007bff'}}>Send some funny money to anyone!</b></h4>
                     <Form onSubmit={this.handleSubmit}>
                     <Form.Group as={Row}>
