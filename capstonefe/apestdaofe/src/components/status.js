@@ -17,10 +17,19 @@ class Status extends Component {
     componentDidMount() {
         axios.get(endpoint)
             .then(res => {
-                const length = res.data.length;
-                const address = res.data.chain[1].transactions[0].receiver;
-                this.setState({ length, address });
+                const chain = res.data.chain;
+                if (chain && chain.length > 0) {
+                    const length = chain.length;
+                // } && chain[1].transactions && chain[1].transactions.length >0) {
+                    const address = res.data.chain[1].transactions[0].receiver;
+                    this.setState({ length, address })
+                } else {
+                    this.setState({ error: 'ApeSt DAO on this node may not be synced yet, please try again'});
+                }
             })
+                .catch(error => {
+                    this.setState({ error: 'please try your ApeSt DAO node again!'})
+                })
     }
 
     render(){

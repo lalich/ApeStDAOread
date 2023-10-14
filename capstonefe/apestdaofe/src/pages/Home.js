@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import Status from '../components/Status';
 import Send from '../components/Send';
 import Transactions from '../components/Transactions';
@@ -6,9 +6,9 @@ import Header from '../components/Header'
 import axios from 'axios';
 import '../components/Header.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import W3S from '../components/W3S';
 
-// const [walletAdd, setWalletAdd] = useState("");
+const Home = () => {
+const [walletAdd, setWalletAdd] = useState("");
 
 const requestAccounts = async () => {
   console.log('Requesting access ...');
@@ -20,7 +20,7 @@ const requestAccounts = async () => {
         method: "eth_requestAccounts",
       });
       console.log(accounts);
-      // setWalletAdd(accounts[0])
+      setWalletAdd(accounts[0])
     } catch (error) {
       console.log('error getin in the door', error)
     }
@@ -30,15 +30,10 @@ const requestAccounts = async () => {
 
 }
 
-const endpoint = '/mine_block'
-class Home extends Component {
-  constructor(props){
-    super(props);
-  }
-  componentDidMount() {
-    axios.get(endpoint)
-  }
-  render(){
+useEffect(() => {
+  axios.get('/mine_block');
+}, []);
+
     return (
        
       <div className='App'>
@@ -51,12 +46,12 @@ class Home extends Component {
           <button>Sign-in Like a Boomer</button>
         </div>
         <Status/>
-        <h3>Connected to Eth via: </h3>
+        <h3>Connected to Eth via: {walletAdd}</h3>
         <Send/>
         <Transactions/>
       </div>
     )
   }
-  }
+  
 
 export default Home;
