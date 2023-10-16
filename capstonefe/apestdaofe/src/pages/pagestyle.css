@@ -1,0 +1,77 @@
+.checks {
+align-items: center;
+text-align: center;
+color: yellow;
+background-color: black;
+}
+
+.b2h {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-image: url('https://img1.wsimg.com/isteam/ip/4fa87b7c-1ea4-4c14-a58c-c1a9d7ea8f9f/blob-3152e2a.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:907,h:500,cg:true');
+    background-size: 100% 420px;
+    height: 420px;
+    background-color: black
+    
+}
+
+.fform {
+    display: grid;
+    text-align: center;
+    text-decoration: underline;
+    background-color: #c3bba9;
+    font-size: larger;
+}
+
+h3 {
+    text-align: center;
+}
+
+.butt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sigup {
+    display: grid;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    
+}
+
+.projsub {
+    background-image: url('https://media.istockphoto.com/id/1181366400/photo/in-the-hands-of-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-on.webp?b=1&s=170667a&w=0&k=20&c=QFTFteDQyrkmK9gTzquXRFU2JhzuN5dm7irpjxHw2tU=');
+    background-size: cover;
+    height: 151px;
+    border-radius: 11px;
+    border-color: #378b20;
+    border-style: double;
+    color: rgb(251, 180, 180);
+    text-align: center;
+    padding-bottom: 109px;;
+    
+
+}
+
+.ethlogi {
+    background-image: url('https://wp.technologyreview.com/wp-content/uploads/2020/09/MIT_SD_ProofofStake_Horizontal.jpg');
+    background-size: cover;
+    height: 101px;
+    width: 223px;
+    border-radius: 11px;
+    border-color: #378b20;
+    border-style: double;
+    color: rgb(50, 7, 189);
+    text-align: center;
+    padding-bottom: 109px;;
+    
+}
