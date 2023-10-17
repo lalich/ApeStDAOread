@@ -71,10 +71,7 @@ useEffect(() => {
         <div className='header'>
         
         </div>
-        <div>
-          <br/>
-          <button className='ethlogi' onClick={requestAccounts}>Sign-in w/ Web3</button>
-        </div>
+        
         <h2 style={{color:"#378b20"}}>ApeSt DAO</h2>
         
         <div>
@@ -101,6 +98,10 @@ useEffect(() => {
         </div>
           )}
           </div>
+          <div>
+          <br/>
+          <button className='ethlogi' onClick={requestAccounts}>Sign-in w/ Web3</button>
+        </div>
         <br/>
           <button onClick={navToJungle}>Create an ApeSt DAO Project</button>
           <br/><br/>
