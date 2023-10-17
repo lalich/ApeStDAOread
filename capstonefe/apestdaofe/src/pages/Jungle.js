@@ -6,28 +6,7 @@ import { ethers } from 'ethers';
 import axios from 'axios';
 
 const Jungle = () => {
-    const ApeStFFcreate = async (data) => {
-            try {
-                const formData = {
-                    name: "Project Name",
-                    ein: "EIN Value",
-                    locationZip: "Zip Code",
-                    description: "Project Description",
-                    founder: "Founder Address",
-                    website: "Website URL",
-                    jungle: "",
-                    tree: "",
-                    node: "",
-
-                }
-                const response = await axios.post('create_apestff', data);
-                console.log(response.data.result);
-                
-            } catch (error) {
-                console.error('Error this time', error)
-            }
-
-    }
+    
 
     return <>
         <div>
@@ -67,7 +46,7 @@ const Jungle = () => {
         or a Node
         <input type='checkbox' name='node' checkbox='empty'/>
         <br/>
-        <button onClick={ApeStFFcreate} className='projsub' type="submit">Upload Project to the Chain for Review</button>
+        <button className='projsub' type="submit">Upload Project to the Chain for Review</button>
         </div>
 
         </Form>
