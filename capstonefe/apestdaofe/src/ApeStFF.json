@@ -1,0 +1,108 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ein",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "locationZip",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "website",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "founder",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "jungle",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "tree",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "node",
+				"type": "bool"
+			}
+		],
+		"name": "createNFTProject",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "ApeStFFs",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ein",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "locationZip",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "description",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "website",
+				"type": "string"
+			},
+			{
+				"internalType": "address",
+				"name": "founder",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "jungle",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "tree",
+				"type": "bool"
+			},
+			{
+				"internalType": "bool",
+				"name": "node",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
