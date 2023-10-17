@@ -7,6 +7,7 @@ import { ethers } from 'ethers';
 
 const ApeStDAO = () => {
 const [walletAdd, setWalletAdd] = useState("");
+const [contractDetails, setContractDetails] = useState(null)
 
 const requestAccounts = async () => {
   console.log('Requesting access ...');
@@ -47,9 +48,21 @@ const navToJungle = () => {
 }
 
 
-
 useEffect(() => {
   axios.get('/mine_block');
+}, []);
+
+const loadContractDetails = async () => {
+  try {
+    const response = await axios.get('/contract_details');
+    setContractDetails(response.data.contract_details);
+  } catch (error) {
+    console.error('Error loading the deets:', error);
+  }
+}
+
+useEffect(() => {
+  loadContractDetails();
 }, []);
 
     return (
@@ -60,15 +73,37 @@ useEffect(() => {
         </div>
         <div>
           <br/>
-          <button onClick={navToJungle}>Create an ApeSt DAO Project</button>
-          <br/><br/>
           <button className='ethlogi' onClick={requestAccounts}>Sign-in w/ Web3</button>
-       
-         
         </div>
         <h2 style={{color:"#378b20"}}>ApeSt DAO</h2>
-        <h3>Connected to: <br/> {walletAdd}</h3>
-     
+        
+        <div>
+          {contractDetails && (
+            <div>
+          <h2>Your Contract Details:</h2>
+          <h3>{contractDetails.message}</h3>
+          <p>Contract Address: {contractDetails.contract}</p>
+          <p>Project Name: {contractDetails.name}</p>
+          <p>EIN/TIN: {contractDetails.ein}</p>
+          <p>Project Description: {contractDetails.description}</p>
+          <p>Founder: {contractDetails.founder}</p>
+          <p>HQ Location: {contractDetails.locationZip}</p>
+          <p>Website: {contractDetails.website}</p>
+          {contractDetails.jungle && (
+            <p>Tier: Jungle</p>
+          )} 
+          {contractDetails.tree && (
+            <p>Tier: Tree</p>
+          )}
+          {contractDetails.node && (
+            <p>Tier: Node</p>
+          )}
+        </div>
+          )}
+          </div>
+        <br/>
+          <button onClick={navToJungle}>Create an ApeSt DAO Project</button>
+          <br/><br/>
         <div className="link">
         <Link to="/">Back to the DAO Chain!</Link>
         </div>

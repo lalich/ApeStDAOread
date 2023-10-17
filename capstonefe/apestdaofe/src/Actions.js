@@ -24,10 +24,9 @@ export const ApeStFFcreate = async (data) => {
         console.log('Response:', response)
         console.log('Response:', response.data)
         return null
-
+            
     } catch (error) {
         console.error('Error this time', error)
         return null
     }
-        
 }
