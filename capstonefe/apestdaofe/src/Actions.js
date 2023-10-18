@@ -15,7 +15,7 @@ export const ApeStFFcreate = async (data) => {
             node: document.querySelector('input[name="node"]').checked,
         };
         console.log(formData)
-        const response = await axios.post('create_apestff', formData, {
+        const response = await axios.post('apestff', formData, {
             headers: {
                 'Content-Type': 'application/json',
             },

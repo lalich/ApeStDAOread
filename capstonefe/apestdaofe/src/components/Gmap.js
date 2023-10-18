@@ -35,10 +35,10 @@ Languages:
 Packages:
 // B/E:
 'Django';
-'Crispy';
 'Boootstrap';
 'Web3.py';
 'Moralis';
+'Crispy';
 
 // F/E
 "react";
