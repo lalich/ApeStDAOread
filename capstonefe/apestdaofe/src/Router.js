@@ -16,7 +16,7 @@ const apeRouter = createBrowserRouter(createRoutesFromElements(
         <Route path='/joinapest' element={<JoinApeSt />} />
         <Route path='/blogin' element={<BLogin />} />
         <Route path="/jungle" element={<Jungle />} />
-        <Route path="/create/ApeStFF" element={<ApeStDAO />} action={ApeStFFcreate}/>
+        <Route path="/ApeStFF" element={<ApeStDAO />} action={ApeStFFcreate}/>
     </Route>
     </>
     ))

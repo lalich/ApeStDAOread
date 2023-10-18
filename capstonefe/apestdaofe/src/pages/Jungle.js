@@ -15,7 +15,7 @@ const Jungle = () => {
         </div>
         
         <h1 style={{textAlign: "center", color: 'black', backgroundColor: '#378b20'}}>Welcome to the Jungle</h1>
-        <Form method='post' action='/create/ApeStFF'>
+        <Form method='post' action='/ApeStFF'>
             <div className='fform'>
         What is the Name of your project?
         <input type='text' name='name' placeholder='Project Name'/>

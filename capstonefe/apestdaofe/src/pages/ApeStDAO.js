@@ -2,7 +2,7 @@ import React, { Component, useState, useEffect } from 'react';
 import Status from '../components/Status';
 import axios from 'axios';
 import '../components/Header.css'
-import { BrowserRouter as Router, Route, Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ethers } from 'ethers';
 
 const ApeStDAO = () => {
